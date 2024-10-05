@@ -17,9 +17,9 @@ class Cabinet extends StatelessWidget {
             Text(
                 style: const TextStyle(fontFamily: 'Time', fontSize: 24),
                 '$nameResult'),
-            const SizedBox(height: 8),
+            const SizedBox(height: 16),
             Text(
-                style: const TextStyle(fontFamily: 'Time', fontSize: 24),
+                style: TextStyle(fontFamily: 'Time', fontSize: 24, color: (debtResult! > 0) ?Colors.red :Colors.green),
                 'Задолжность всего: $debtResult руб.'),
             const SizedBox(height: 8),
             Text(
