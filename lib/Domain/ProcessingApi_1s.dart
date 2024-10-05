@@ -18,7 +18,16 @@ class ProcessingApi1s {
   //собираем json {ключ_участка:["Всего", "СуммаДолга", "СуммаПереплаты", "СуммаПени"];.....}
   Future<Map> keyDebts() async {
     final Map debtbyarea = await GetApi().debtByArea();
+    final Map<String, List<num>> keyDebtsResult = {};
+    for (int i = 0; i < debtbyarea["value"].length; i++) {
+      keyDebtsResult[debtbyarea["value"][i]["Участок_Key"]] = [
+        debtbyarea["value"][i]["Всего"],
+        debtbyarea["value"][i]["СуммаДолга"],
+        debtbyarea["value"][i]["СуммаПереплаты"],
+        debtbyarea["value"][i]["СуммаПени"]
+      ];
+    }
 
-    return debtbyarea;
+    return keyDebtsResult;
   }
 }

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-import 'package:snt_test/Domain/ProcessingApi_1s.dart';
 import 'package:snt_test/Presentation/HomePage.dart';
 import '../Domain/forCabinet.dart';
 
@@ -16,23 +14,23 @@ class Authorization extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const HomePage(),
-            ),
-          );
-        },
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const HomePage(),
+                  ),
+                );
+              },
         child: const Text('ОК'),
       ),
       body: Container(
           padding: const EdgeInsets.all(16),
-          child: Column(
+          child: const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text('Номер участка'),
               TextField(
-                onChanged: toPlotNumber,
+                onSubmitted: toAreaNumber,
                 style: TextStyle(fontSize: 22),
                 decoration: InputDecoration(
                   filled: true,
@@ -44,7 +42,7 @@ class Authorization extends StatelessWidget {
               ),
               Text('Пароль'),
               TextField(
-                onChanged: toPass,
+                onSubmitted: toPass,
                 style: TextStyle(fontSize: 22),
                 decoration: InputDecoration(
                   filled: true,
@@ -54,16 +52,6 @@ class Authorization extends StatelessWidget {
                   ),
                 ),
               ),
-              TextButton(
-                onPressed: () async {
-                  //Map testX = await ProcessingApi1s().keyDebts();
-                  Map testY = await ProcessingApi1s().numberKeyName();
-                  //print(testX["value"][0]["Всего"]);
-                  //print(testY["value"][30]["ПредставлениеВладельцевУчастка"]);
-                  print(testY['245']);
-                },
-                child: Text('test api'),
-              )
             ],
           )),
     );

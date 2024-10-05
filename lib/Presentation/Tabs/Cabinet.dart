@@ -4,6 +4,8 @@ import 'package:snt_test/Domain/forCabinet.dart';
 class Cabinet extends StatelessWidget {
   const Cabinet({super.key});
 
+
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -12,13 +14,25 @@ class Cabinet extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 8),
-            Text('Задолжность всего: $debtResult руб.'),
+            Text(
+                style: const TextStyle(fontFamily: 'Time', fontSize: 24),
+                '$nameResult'),
             const SizedBox(height: 8),
-            Text('Сумма долга: $debtAmountResult руб.'),
+            Text(
+                style: const TextStyle(fontFamily: 'Time', fontSize: 24),
+                'Задолжность всего: $debtResult руб.'),
             const SizedBox(height: 8),
-            Text('Сумма переплаты: $overpaymentResult руб.'),
+            Text(
+                style: const TextStyle(fontFamily: 'Time', fontSize: 22),
+                'Сумма долга: $debtAmountResult руб.'),
             const SizedBox(height: 8),
-            Text('Пени: $penaltiesResult руб.'),
+            Text(
+                style: const TextStyle(fontFamily: 'Time', fontSize: 22),
+                'Сумма переплаты: $overpaymentResult руб.'),
+            const SizedBox(height: 8),
+            Text(
+                style: const TextStyle(fontFamily: 'Time', fontSize: 22),
+                'Пени: $penaltiesResult руб.'),
           ],
         ));
   }
