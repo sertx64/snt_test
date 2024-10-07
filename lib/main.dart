@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:snt_test/Domain/forCabinet.dart';
 import 'Presentation/Authorization.dart';
 
 void main() {
+  toCabinet();
   runApp(const MyApp());
 }
 

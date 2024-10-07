@@ -14,13 +14,15 @@ class Authorization extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-                Navigator.push(
+          areaNumberResult == 'null'
+              ? null
+              : Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const HomePage(),
                   ),
                 );
-              },
+        },
         child: const Text('ОК'),
       ),
       body: Container(
@@ -30,7 +32,7 @@ class Authorization extends StatelessWidget {
             children: [
               Text('Номер участка'),
               TextField(
-                onSubmitted: toAreaNumber,
+                onChanged: toAreaNumber,
                 style: TextStyle(fontSize: 22),
                 decoration: InputDecoration(
                   filled: true,
@@ -42,7 +44,7 @@ class Authorization extends StatelessWidget {
               ),
               Text('Пароль'),
               TextField(
-                onSubmitted: toPass,
+                onChanged: toPass,
                 style: TextStyle(fontSize: 22),
                 decoration: InputDecoration(
                   filled: true,
