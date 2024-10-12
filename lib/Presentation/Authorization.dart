@@ -14,6 +14,7 @@ class Authorization extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
+          ForCabinet().buildCabinet();
           ForCabinet.areaNumberResult == 'null'
               ? null
               : Navigator.push(
@@ -33,6 +34,7 @@ class Authorization extends StatelessWidget {
               Text('Номер участка'),
               TextField(
                 onChanged: toAreaNumber,
+                keyboardType: TextInputType.number,
                 style: TextStyle(fontSize: 22),
                 decoration: InputDecoration(
                   filled: true,
@@ -44,7 +46,7 @@ class Authorization extends StatelessWidget {
               ),
               Text('Код'),
               TextField(
-                //onChanged: toPass,
+                onChanged: toPass,
                 style: TextStyle(fontSize: 22),
                 decoration: InputDecoration(
                   filled: true,
