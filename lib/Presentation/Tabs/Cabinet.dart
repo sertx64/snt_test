@@ -4,8 +4,6 @@ import 'package:snt_test/Domain/forCabinet.dart';
 class Cabinet extends StatelessWidget {
   const Cabinet({super.key});
 
-
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,23 +14,28 @@ class Cabinet extends StatelessWidget {
             const SizedBox(height: 8),
             Text(
                 style: const TextStyle(fontFamily: 'Time', fontSize: 24),
-                '$nameResult'),
+                ForCabinet.nameResult),
             const SizedBox(height: 16),
             Text(
-                style: TextStyle(fontFamily: 'Time', fontSize: 24, color: (debtResult! > 0) ?Colors.red :Colors.green),
-                'Задолжность всего: $debtResult руб.'),
+                style: TextStyle(
+                    fontFamily: 'Time',
+                    fontSize: 24,
+                    color: (ForCabinet.debtResult > 0)
+                        ? Colors.red
+                        : Colors.green),
+                'Задолжность всего: ${ForCabinet.debtResult} руб.'),
             const SizedBox(height: 8),
             Text(
                 style: const TextStyle(fontFamily: 'Time', fontSize: 22),
-                'Сумма долга: $debtAmountResult руб.'),
+                'Сумма долга: ${ForCabinet.debtAmountResult} руб.'),
             const SizedBox(height: 8),
             Text(
                 style: const TextStyle(fontFamily: 'Time', fontSize: 22),
-                'Сумма переплаты: $overpaymentResult руб.'),
+                'Сумма переплаты: ${ForCabinet.overpaymentResult} руб.'),
             const SizedBox(height: 8),
             Text(
                 style: const TextStyle(fontFamily: 'Time', fontSize: 22),
-                'Пени: $penaltiesResult руб.'),
+                'Пени: ${ForCabinet.penaltiesResult} руб.'),
           ],
         ));
   }

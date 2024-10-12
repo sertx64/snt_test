@@ -3,7 +3,7 @@ import 'package:snt_test/Domain/forCabinet.dart';
 import 'Presentation/Authorization.dart';
 
 void main() {
-  toCabinet();
+  ToCabinet().toCabinet();
   runApp(const MyApp());
 }
 

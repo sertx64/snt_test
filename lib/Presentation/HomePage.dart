@@ -28,7 +28,7 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
         centerTitle: true,
         title: Column(children: [
           const Text('СНТ Магистраль'),
-          Text('участок № $areaNumberResult')
+          Text('участок № ${ForCabinet.areaNumberResult}')
         ]),
 
         bottom: TabBar(

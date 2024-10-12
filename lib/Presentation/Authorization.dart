@@ -14,7 +14,7 @@ class Authorization extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          areaNumberResult == 'null'
+          ForCabinet.areaNumberResult == 'null'
               ? null
               : Navigator.push(
                   context,
@@ -42,9 +42,9 @@ class Authorization extends StatelessWidget {
                   ),
                 ),
               ),
-              Text('Пароль'),
+              Text('Код'),
               TextField(
-                onChanged: toPass,
+                //onChanged: toPass,
                 style: TextStyle(fontSize: 22),
                 decoration: InputDecoration(
                   filled: true,
