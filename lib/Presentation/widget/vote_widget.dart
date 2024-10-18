@@ -42,7 +42,7 @@ class _VoteWidgetState extends State<VoteWidget> {
             onPressed: () {
               print(selectedOption);
             },
-            child: Text('Голосовать'),
+            child: const Text('Голосовать'),
           ),
         ]));
   }

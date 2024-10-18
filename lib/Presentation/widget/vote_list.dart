@@ -3,7 +3,7 @@ import 'package:snt_test/Presentation/widget/vote_widget.dart';
 
 
 class VoteList extends StatefulWidget {
-  VoteList({super.key});
+  const VoteList({super.key});
 
   @override
   _VoteListState createState() => _VoteListState();

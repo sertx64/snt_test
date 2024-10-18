@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:snt_test/Domain/forCabinet.dart';
 import 'package:snt_test/Presentation/Tabs/Cabinet.dart';
 import 'package:snt_test/Presentation/Tabs/News.dart';
-import 'package:snt_test/Presentation/Tabs/Vote.dart';
+import 'package:snt_test/Presentation/Tabs/vote.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
