@@ -44,9 +44,9 @@ class ForCabinet {
     } else {
       areaNumberResult = 'null';
     }
-    if (keyResult != '$pass-fb72-11ee-9da8-fa163e68cb1a') {
-      areaNumberResult = 'null';
-    }
-    print(keyResult);
+    // if (keyResult != '$pass-fb72-11ee-9da8-fa163e68cb1a') {
+    //   areaNumberResult = 'null';
+    // }
+    // print(keyResult);
   }
 }
