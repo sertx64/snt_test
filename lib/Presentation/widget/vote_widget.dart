@@ -21,10 +21,10 @@ class _VoteWidgetState extends State<VoteWidget> {
           borderRadius: BorderRadius.circular(16),
           color: Colors.blueGrey[400],
         ),
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(8),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           FormBuilderRadioGroup(
-            name: 'vote1',
+            name: 'vote',
             decoration: InputDecoration(
               labelText: widget.labelVote,
               labelStyle: const TextStyle(fontSize: 22),
