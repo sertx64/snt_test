@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:snt_test/Domain/forCabinet.dart';
 
 class VoteWidget extends StatefulWidget {
   VoteWidget(this.labelVote, this.optionsVote, {super.key});
@@ -40,7 +41,8 @@ class _VoteWidgetState extends State<VoteWidget> {
           ),
           ElevatedButton(
             onPressed: () {
-              print(selectedOption);
+
+              print('Представитель участка № ${ForCabinet.areaNumberResult}, в вопросе ${widget.labelVote}, выбрал вариант $selectedOption');
             },
             child: const Text('Голосовать'),
           ),

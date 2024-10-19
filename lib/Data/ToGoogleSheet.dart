@@ -37,7 +37,7 @@ void toGoogleTab() async {
   final gSheets = GSheets(_credentials);
   final ss = await gSheets.spreadsheet(_spreadsheetId);
 
-  var sheet = ss.worksheetByTitle('snt');
+  final sheet = ss.worksheetByTitle('snt');
 
   //await sheet!.values.insertValue(newValue, column: 1, row: 1);
   //print(toNameResult);

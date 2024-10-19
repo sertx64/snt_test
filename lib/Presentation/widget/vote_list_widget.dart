@@ -10,7 +10,7 @@ class VoteList extends StatefulWidget {
 }
 
 class _VoteListState extends State<VoteList> {
-  List voteList = [{'lable':'Вопрос1', 'options':['var1', 'var3']}, {'lable':'Вопрос1', 'options':['var1', 'var2', 'var3']}, {'lable':'Вопрос1', 'options':['var1', 'var2', 'var3']}];
+  List voteList = [{'lable':'Вопрос1', 'options':['var1', 'var3']}, {'lable':'Вопр второй', 'options':['var1', 'var2', 'var3']}, {'lable':'Вопрос 3', 'options':['var1', 'var2', 'var3']}];
 
   @override
   Widget build(BuildContext context) {
